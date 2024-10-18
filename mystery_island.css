@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #87ceeb;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+#storyline {
+    margin: 20px auto;
+    padding: 10px;
+    width: 300px;
+    background-color: #fff8dc;
+    border: 2px solid #333;
+    display: none; /* Hidden initially */
+}
+
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #32cd32;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f00;
+    top: 180px;
+    left: 180px;
+    border-radius: 10px;
+    transition: top 0.2s, left 0.2s; /* Smooth movement */
+}
+
+.key {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite; /* Key animation */
+}
+
+.treasure {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #8b4513;
+    border-radius: 10px;
+    display: none; /* Hidden until all keys are collected */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#controls {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+p {
+    margin: 5px;
+    color: #333;
+}

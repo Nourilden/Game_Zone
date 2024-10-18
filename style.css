@@ -1,0 +1,503 @@
+/* Resetting margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4757;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #ff4757;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4757;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Section styling */
+section {
+    padding: 6rem 5%;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#home {
+    background: url('gaming-background.jpg') no-repeat center center/cover;
+    padding: 10rem 5%;
+    color: #fff;
+}
+
+#home h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Games Section */
+.games-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+.game {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.game img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.game:hover img {
+    opacity: 0.85;
+}
+
+.game h3 {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    color: #ff4757;
+}
+
+.game button {
+    background-color: #ff4757;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.game button:hover {
+    background-color: #e84118;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.8rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: #ff4757;
+    color: white;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #e84118;
+}
+
+/* Game Section Styles */
+.games-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+/* Individual Game Card Styling */
+.game {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Hover Effects */
+.game:hover {
+    transform: translateY(-15px) rotateZ(2deg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    background-color: #2f3640;
+}
+
+/* Game Image Styling */
+.game img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.game:hover img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Game Title Styling */
+.game h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #ff4757;
+    position: relative;
+    z-index: 1;
+}
+
+/* Game Description Styling */
+.game p {
+    margin-top: 0.5rem;
+    color: #f5f6fa;
+    opacity: 0.8;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.4s ease;
+}
+
+.game:hover p {
+    color: #ff6b81;
+}
+
+/* Game Button Styling */
+.game button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game button:hover {
+    background-color: #e84118;
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
+}
+
+/* Additional Animation Effects */
+.game::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 71, 87, 0.3);
+    transform: rotate(45deg);
+    transition: opacity 0.4s ease;
+    z-index: 0;
+    opacity: 0;
+}
+
+.game:hover::before {
+    opacity: 0.4;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 1rem 5%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+}
+/* Game Popup Styling */
+.game-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.game-popup-content {
+    background-color: #2f3640;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.game-popup h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.game-popup p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.game-popup button {
+    background-color: #ff4757;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    display: none;
+}
+
+.game-popup button:hover {
+    background-color: #e84118;
+}
+
+/* Loader Styling */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.contact-button-gradient {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-button-gradient:hover {
+    background: linear-gradient(45deg, #5a0fb1, #1a65d5);
+    transform: scale(1.05);
+}
+
+.contact-button-gradient:active {
+    transform: scale(0.95);
+}
+.contact-button-outline {
+    background: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-button-outline:hover {
+    background: #007BFF;
+    color: white;
+}
+
+.contact-button-outline:active {
+    transform: scale(0.95);
+}
+.contact-button-shadow {
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: all 0.3s;
+}
+
+.contact-button-shadow:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+.contact-button-shadow:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(0); /* Return to original position */
+}
+.contact-button-pill {
+    background-color: #ff4081; /* Pink background */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Fully rounded */
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-button-pill:hover {
+    background-color: #e91e63; /* Darker pink on hover */
+    transform: scale(1.05);
+}
+
+.contact-button-pill:active {
+    transform: scale(0.95);
+}
+.contact-button-3d {
+    background-color: #ffc107; /* Yellow background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: all 0.3s;
+}
+
+.contact-button-3d:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+.contact-button-3d:active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(0); /* Return to original position */
+}
